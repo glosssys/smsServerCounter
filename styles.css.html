@@ -1,0 +1,118 @@
+<!-- This is the stylesheet -->
+<style>
+body {background-color: black;
+margin:0px !important;
+padding:0px !important;
+      }
+
+.button{
+background-color: #000000;
+border: none;}
+.chart {
+	   text-align: center;
+
+}
+
+
+.mask{
+width:100%;
+height:21%;
+background:#000000;
+position: fixed;
+
+}
+
+.label{
+position: relative;
+top: -70px;
+padding-bottom:30%;
+}
+
+div p{
+display: inline;
+color:#ffffff;	
+font-family: sans-serif;
+font-size: 18px;
+padding:0px 100px 10px 250px;
+
+}
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+img{
+    
+    width:100%;
+    padding-top: 20%;
+    
+}
+
+
+.padding{
+   width: 100%;
+
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+svg text.bar{
+  fill:white;
+  font-size:30px;
+  font-family: 'Raleway', sans-serif;
+  text-anchor: middle;
+  text-align: center;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+}
+</style>
+
