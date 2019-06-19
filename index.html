@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html>
+<!-- styles -->
+<?!= HtmlService.createHtmlOutputFromFile("styles.css").getContent(); ?>
+<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+<!-- javascript -->
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+
+<?!= HtmlService.createHtmlOutputFromFile("chart.js").getContent() ?>
+<?!= HtmlService.createHtmlOutputFromFile("main.js").getContent() ?>
+<?!=HtmlService.createHtmlOutputFromFile("scroll2.js").getContent()?>
+
+
+<div class ="mask"></div>
+<div class="content">
+<img src="https://drive.google.com/uc?id=1UIGeIS6dqwAMakQjPZtRnLYhi_A95CxR">
+<div class ="label animate-flicker">
+<p>A</p>
+<p>B</p>
+<p>C</p>
+</div>
+
+
+  
+  <input class="button" type="submit" value="Refresh" id="refresh"><br>
+  
+  <svg class="chart"></svg>
+
+</div>
+
+<script>
+// The code in this function runs when the page is loaded.
+
+$ (setInterval(function(){
+         google.script.run.withSuccessHandler(scroll).lookatsheet();
+         },10000));
+    
+
+function scroll(e) {
+
+   if(e === true){
+  console.log('ping');
+  document.getElementById('refresh').click();
+  $(window).delay(3000).scrollTo("max",3000).delay(5000).scrollTo(0,1000);
+  console.log('scrolled');
+
+  
+}
+
+
+
+</script>
+
+</html>
+
